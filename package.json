@@ -1,0 +1,52 @@
+{
+  "name": "skills-budget",
+  "version": "0.1.0",
+  "description": "Estimate whether a Codex or Claude Code skill catalog fits the hidden skill-listing budget.",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "bin": {
+    "skills-budget": "./dist/cli.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "codex",
+    "claude-code",
+    "skills",
+    "agent-skills",
+    "mcp",
+    "cli"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Salman-Labs/skills-budget.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Salman-Labs/skills-budget/issues"
+  },
+  "homepage": "https://github.com/Salman-Labs/skills-budget#readme",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
+  }
+}
